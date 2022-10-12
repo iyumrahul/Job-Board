@@ -1,18 +1,23 @@
-<div style="color:rgb(120,120,120) margin-bottom=4px">
-  <h4 >
-    {{job['title']}}
-  </h4>
-  <div>
-    <b>Comapny: </b>{{job['Company']}} 
+<div span class="border-bottom">
+  <div class="col-9">
+    <h4  style="color:rgb(120,120,120); margin-bottom=6px;">
+      {{job['title']}}
+    </h4>
+    <div>
+      <b>Comapny: </b>{{job['Company']}} 
+    </div>
+    <div>
+      <b>Location: </b>{{job['Location']}} 
+    </div>
+    {% if 'Salary' in job %}
+    <div>
+      <b>Salary: </b>{{job['Salary']}} 
+    </div>
+    {% endif %}
   </div>
-  <div>
-    <b>Location: </b>{{job['Location']}} 
-  </div>
-  {% if 'salary' in job %}
-  <div>
-    <b>Salary: </b>{{job['Salary']}} 
-  </div>
-  {% endif %}
+  <div class="col-3">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+  </div> 
 </div>
   
 
